@@ -73,3 +73,32 @@ nmap <leader>cd :cs find d <C-R>=expand("<cword>")<CR><CR>
 set foldmethod=indent
 set foldlevel=99
 
+"tasklist
+map <leader>td <Plug>TaskList
+
+" gundo
+map <leader>g :GundoToggle<CR>
+
+"pyflake
+let g:pyflakes_use_quickfix = 0
+
+" Pep8
+let g:pep8_map='<leader>8'
+
+" complete
+au FileType python set omnifunc=pythoncomplete#Complete
+let g:SuperTabDefaultCompletionType = "context"
+
+set completeopt=menuone,longest,preview
+
+"NERD
+map <leader>n :NERDTreeToggle<CR>
+
+" Rope
+map <leader>j :RopeGotoDefinition<CR>
+map <leader>r :RopeRename<CR>
+
+"ack
+nmap <leader>a <Esc>:Ack!
+
+
