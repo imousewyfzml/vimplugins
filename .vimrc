@@ -101,4 +101,28 @@ map <leader>r :RopeRename<CR>
 "ack
 nmap <leader>a <Esc>:Ack!
 
+" current tags
+nmap <leader>cg :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .
 
+" miniBufExplorer++
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
+let g:miniBufExplMapTabSwitchBufs = 1
+let g:miniBufExplModSelTarget = 1
+
+" Tlist setting
+let Tlist_Show_One_File=1
+let Tlist_Exit_OnlyWindow=1
+let Tlist_Ctags_Cmd='/usr/bin/ctags'
+
+" winManager setting
+let g:winManagerWindowLayout='BufExplorer,FileExplorer|TagList'
+nmap <leader>wm :WMToggle<cr>
+
+" run python file
+map <leader>py :!python %<CR>
+
+" rfc syntax files
+if expand('%:t')=~?'rfc\d\+'
+    setfiletype rfc
+endif
