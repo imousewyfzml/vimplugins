@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/home/imouse/projects'
+let g:netrw_dirhist_2='/usr/src/linux-3.4.9-gentoo'
+let g:netrw_dirhist_3='/home/imouse/study/sources/aMule-2.2.6/src'

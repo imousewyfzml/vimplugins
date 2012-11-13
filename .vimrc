@@ -14,6 +14,8 @@ let mapleader = ","
 " when .vimr is endited, reload it 
 autocmd! bufwritepost .vimrc source ~/.vimrc
 
+" gui options
+set guioptions-=T
 
 " tab stop
 set tabstop=4
@@ -105,10 +107,10 @@ nmap <leader>a <Esc>:Ack!
 nmap <leader>cg :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .
 
 " miniBufExplorer++
-let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplMapWindowNavArrows = 1
-let g:miniBufExplMapTabSwitchBufs = 1
-let g:miniBufExplModSelTarget = 1
+"let g:miniBufExplMapWindowNavVim = 1
+"let g:miniBufExplMapWindowNavArrows = 1
+"let g:miniBufExplMapTabSwitchBufs = 1
+""let g:miniBufExplModSelTarget = 1
 
 " Tlist setting
 let Tlist_Show_One_File=1
@@ -123,6 +125,9 @@ nmap <leader>wm :WMToggle<cr>
 map <leader>py :!python %<CR>
 
 " rfc syntax files
-if expand('%:t')=~?'rfc\d\+'
-    setfiletype rfc
-endif
+function! Rfcsyntax ()
+    if expand('%:t')=~?'rfc\d\+'
+        setfiletype rfc
+    endif
+endfunction
+autocmd! BufReadPost rfc\d\+.txt setfiletype rfc
