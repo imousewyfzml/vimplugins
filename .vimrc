@@ -8,6 +8,7 @@ set history=50
 set ruler
 set showcmd
 set incsearch
+set nu
 
 " set mapleader
 let mapleader = ","
@@ -105,6 +106,9 @@ nmap <leader>a <Esc>:Ack!
 
 " current tags
 nmap <leader>cg :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .
+
+" tags
+set tags+=~/.vim/tags/include_tags
 
 " miniBufExplorer++
 "let g:miniBufExplMapWindowNavVim = 1
