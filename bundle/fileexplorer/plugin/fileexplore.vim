@@ -62,7 +62,7 @@ let s:fileExplorerDotRemove='yes'
 " command from the vim/gvim editor itself. For information on using/setting up cscope please go to 
 " 'http://cscope.sourceforge.net/' and 'http://cscope.sourceforge.net/cscope_vim_tutorial.html'
 "
- map <F5> :FileExplore<CR> 
+ map <F12> :FileExplore<CR> 
 
  "Open the file explorer with the existing file list in the file, specified by the parameter
  "s:fileListName. The advantage of this is that the 'find' command will not be

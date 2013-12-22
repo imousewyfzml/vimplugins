@@ -1,7 +1,8 @@
-" pathogen
-let g:pathogen_disabled = [ 'pathogen' ] " don't load self
-call pathogen#infect() "load everthing else
-call pathogen#helptags() "load plugin help files
+" leader
+let mapleader = ","
+" search 
+set incsearch
+set hlsearch
 
 " common setting
 set history=50
@@ -27,6 +28,7 @@ set autoindent
 
 " syntax highlighting
 syntax on
+set nocp
 filetype on
 filetype plugin indent on
 
@@ -52,6 +54,13 @@ if has("cscope")
     set csverb
 endif
 
+" current tags
+nmap <leader>ctg :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .
+
+" tags
+set tags+=~/.tags/include_tags
+set tags+=~/.tags/std_cpp_tags
+" cscope
 set cscopequickfix=s-,c-,d-,i-,t-,e-
 
 " 查找C语言符号，查找函数名，宏出现的地方
@@ -72,6 +81,11 @@ nmap <leader>ci :cs find i <C-R>=expand("<cword>")<CR><CR>
 " 查找本函数调用的函数
 nmap <leader>cd :cs find d <C-R>=expand("<cword>")<CR><CR>
 
+" pathogen
+let g:pathogen_disabled = [ 'pathogen' ] " don't load self
+call pathogen#infect() "load everthing else
+call pathogen#helptags() "load plugin help files
+
 " flod method
 set foldmethod=indent
 set foldlevel=99
@@ -80,7 +94,7 @@ set foldlevel=99
 map <leader>td <Plug>TaskList
 
 " gundo
-map <leader>g :GundoToggle<CR>
+" map <leader>g :GundoToggle<CR>
 
 "pyflake
 let g:pyflakes_use_quickfix = 0
@@ -102,13 +116,8 @@ map <leader>j :RopeGotoDefinition<CR>
 map <leader>r :RopeRename<CR>
 
 "ack
-nmap <leader>a <Esc>:Ack!
+nmap <leader>ac <Esc>:Ack!
 
-" current tags
-nmap <leader>cg :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .
-
-" tags
-set tags+=~/.vim/tags/include_tags
 
 " miniBufExplorer++
 "let g:miniBufExplMapWindowNavVim = 1
@@ -119,7 +128,7 @@ set tags+=~/.vim/tags/include_tags
 " Tlist setting
 let Tlist_Show_One_File=1
 let Tlist_Exit_OnlyWindow=1
-let Tlist_Ctags_Cmd='/usr/bin/ctags'
+" let Tlist_Ctags_Cmd='/usr/bin/ctags'
 
 " winManager setting
 let g:winManagerWindowLayout='BufExplorer,FileExplorer|TagList'
