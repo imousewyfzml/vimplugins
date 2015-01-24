@@ -1,7 +1,4 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/home/imouse/github/miniSctp/include'
-let g:netrw_dirhist_2='/home/imouse/study/sources/gnome-mplayer-1.0.5/src'
-let g:netrw_dirhist_3='/home/imouse/projects/omu'
-let g:netrw_dirhist_4='/home/imouse/projects/omu/platform'
-let g:netrw_dirhist_5='/home/imouse/projects/rmc'
+let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_1='/home/imouse/project/pawscam_app/src'
+let g:netrw_dirhist_2='/home/imouse/project/pawscam_app'
