@@ -16,6 +16,13 @@ let mapleader = ","
 " when .vimr is endited, reload it 
 autocmd! bufwritepost .vimrc source ~/.vimrc
 
+" web
+" js/css/html autocomplete
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+
+
 " gui options
 set guioptions-=T
 
