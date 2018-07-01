@@ -151,3 +151,49 @@ function! Rfcsyntax ()
     endif
 endfunction
 autocmd! BufReadPost rfc\d\+.txt setfiletype rfc
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle
+" required!
+Plugin 'VundleVim/Vundle.vim'
+
+" My Bundles here:
+Plugin 'mileszs/ack.vim'
+Plugin 'mattn/emmet-vim'
+Plugin 'ervandew/supertab'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'majutsushi/tagbar'
+Plugin 'kien/ctrlp.vim' 
+Plugin 'vim-scripts/xml.vim'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'honza/vim-snippets'
+Plugin 'tpope/vim-dispatch'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-rails'
+Plugin 'bling/vim-airline'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'TimothyYe/vim-tips'
+Plugin 'Shougo/neocomplete'
+Plugin 'mhinz/vim-startify'
+Plugin 'vim-scripts/wildfire.vim'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'yonchu/accelerated-smooth-scroll'
+Plugin 'ianva/vim-youdao-translater'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'matze/vim-move'
+
+" For fun...
+Plugin 'uguu-org/vim-matrix-screensaver'
+
+"Plugins for golang
+Plugin 'fatih/vim-go'
+"goimports settings
+"autocmd BufWritePre *.go :Fmt
+
+call vundle#end()
